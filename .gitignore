@@ -1,0 +1,22 @@
+
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python 虚拟环境
+venv/
+.venv/
+
+# 环境变量与 API 密钥
+.env
+.env.*
+
+# 保留环境变量示例文件（如果以后创建）
+!.env.example
+
+# PyCharm 本地配置
+.idea/
+
+# 日志文件
+*.log

@@ -1,0 +1,33 @@
+langchain结构如下：
+
+p02_RAG_knowledge_langchain/
+│
+├── main.py             #项目入口：接收问题、输出答案
+├── .env                #API Key 配置
+│
+├── knowledge/
+│   └── knowledge.txt   #知识库原始文本
+│
+└── rag/
+    ├── __init__.py
+    ├── loader.py       #加载知识库与切分文档
+    ├── embedding.py    #配置 Embedding 模型
+    ├── retriever.py    #文本向量存储与相似度检索
+    └── generator.py    #构建LCEL 调用链、生成答案
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+knowledge/knowledge.txt
+原始知识资料
+    ↓
+loader.py
+读取并切分文本
+    ↓
+embedding.py + retriever.py
+生成向量、存储向量、检索相关文本
+    ↓
+generator.py
+结合检索结果生成回答
+    ↓
+main.py
+负责组织流程、接收问题并打印结果
